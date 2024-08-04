@@ -1,8 +1,6 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
   "OS_Dev":"Intro to OS",
-  "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
     "type": "page"

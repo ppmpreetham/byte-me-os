@@ -1,14 +1,7 @@
----
-title: Introduction to OS
-description: Get to know basics before building an OS
-pubDate: '2024-3-25'
-
----
-
-What happens when you turn the computer ON?
-1.  Executes the firmware code that is on the ROM
+## What happens when you turn the computer ON?
+1.  The computer executes the firmware code that is on the ROM
 2.  ROM performs POST (Power-On Self-Test) which detects RAM
-3.  After that, ROM initializes CPU and hardware
+3.  After that, oROM initializes CPU and hardware
 4.  Looks for a bootable disk, boots OS Kernel
 
 ## There are 2 firmware standards in Computers:
@@ -43,7 +36,7 @@ To make a kernel Multiboot compliant, one just needs to insert a so-called [Mul
 
 
 
-```json
+```json filename="demo.json"
 "features": "-mmx,-sse,+soft-float",
 ```
 - '-' means disable here
