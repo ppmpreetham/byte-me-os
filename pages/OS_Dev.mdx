@@ -9,9 +9,10 @@
 -  UEFI ( Unified Extensible Firmware Interface )
 
 BIOS is simple, supported from the pcs from 1980s. 
+
 UEFI is modern, complex to set-up. It emulates BIOS in the backend.
 
-That is sad, because all the computers boots up in 16-bit #real_mode because 1980 bootloaders would still work.
+That is sad, because all the computers boots up in 16-bit [real mode](https://en.wikipedia.org/wiki/Real_mode) because 1980 bootloaders would still work.
 
 When you turn on a computer, it loads the BIOS from some special flash memory located on the motherboard.
 
@@ -43,6 +44,7 @@ To make a kernel Multiboot compliant, one just needs to insert a so-called [Mul
 - '+' means enable here
 
 #MMX :  (MultiMedia eXtension) Set of instructions in computer processors primarily designed to enhance multimedia performance.
+
 #SSE: (Streaming SIMD Extensions) Another set of instructions in processors aimed at improving multimedia and gaming performance by processing multiple data elements simultaneously.
 
 #MMX and #SSE are features which support [Single Instruction Multiple Data (SIMD)](https://en.wikipedia.org/wiki/SIMD) instructions. That means they do a single operation to multiple datas faster. But they end up taking a lot of time, hence not giving time for the other processes to run. So, we disable it, especially in OS development.
