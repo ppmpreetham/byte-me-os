@@ -12,15 +12,16 @@ h1,h2,a{
     cursor: url(public/CursorsXP.cur), default;
 }
 
-/* a{    cursor: url(public/help_win95.cur),pointer;
-} */
 
 input, p{
     cursor: text;
 }
 
-nav span, nav svg, nav path, nav img, a{
+nav svg, nav path, nav img, a{
     cursor: url(public/Cursor_Hand_Pointer.cur),pointer;
+}
+
+nav span{    cursor: url(public/help_win95.cur),pointer;
 }
 
 img{
