@@ -1,6 +1,7 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
+import { p } from 'nextra/dist/types-c8e621b7'
 
 const config: DocsThemeConfig = {
 
@@ -21,14 +22,15 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/ppmpreetham/tab-os',
   footer: {
-    text: 'MIT 2024 © Preetham Pemmasani',
+    text: <p>MIT 2024 © <a href="https://www.preetham.top/">Preetham Pemmasani</a></p>,
   },
   head: 
   <>
   <meta name="description" content={"Beginner OS Tutorial"} />
-  <link rel="shortcut icon" href="Logo_transparent.png" type="image/x-icon" />k
+  <link rel="shortcut icon" href="Logo_transparent.png" type="image/x-icon" />
   </>
   ,
+  editLink: { component: null },
 }
 
 

@@ -3,17 +3,22 @@
     src: url(public/HomeVideo.ttf);
 }
 
-*{
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=111497),pointer;
-}
-
-a{    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=111529),pointer;
-}
 
 h1,h2,a{
     font-family: HOMEVIDEO;
 }
 
-nav span, nav svg{
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=111512),pointer;
+*{
+    cursor: url(public/CursorsXP.cur), default;
+}
+
+/* a{    cursor: url(public/help_win95.cur),pointer;
+} */
+
+input, p{
+    cursor: text;
+}
+
+nav span, nav svg, nav path, a{
+    cursor: url(public/Cursor_Hand_Pointer.cur),pointer;
 }
