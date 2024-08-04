@@ -2,6 +2,8 @@
 
 Beginner Tutorial to build a simple OS on the top of RUST.
 
+Read it [here](https://www.preetham.top/).
+
 Inspired by Philipp Oppermann's [[blog](https://os.phil-opp.com/)], this tutorial goes deep into OS development, but for complete beginners.
 
 ## Why an Operating System?
