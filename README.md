@@ -1,23 +1,19 @@
-# Nextra Docs Template 
+# Byte Me OS
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Beginner Tutorial to build a simple OS on the top of RUST.
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+Inspired by Philipp Oppermann's [[blog](https://os.phil-opp.com/)], this tutorial goes deep into OS development, but for complete beginners.
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+## Why an Operating System?
 
-## Quick Start
 
-Click the button to clone this repository and deploy it on Vercel:
+Gain deeper understanding of how computers work at a low level. 
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+By creating an OS, you'll learn about memory management, process scheduling, device drivers, and etc.
 
-## Local Development
+Gain complete control over the software running on your hardware.
+Tailor the OS to your specific needs, optimizing performance and security.
 
-First, run `pnpm i` to install the dependencies.
+### Unveiling the Inner Workings
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
+By immersing yourself in the creation of an OS, you will uncover the fascinating realm of low-level computer operations. From mastering the art of memory management to understanding the intricacies of process scheduling and device drivers, every step of the journey will unveil a new layer of knowledge.
