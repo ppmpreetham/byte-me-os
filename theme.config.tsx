@@ -8,11 +8,11 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter()
     if (asPath !== '/') {
       return {
-        titleTemplate: '%s – Byte me OS'
+        titleTemplate: '%s – Byte on OS'
       }
     }
   },
-  logo: <span>Byte me OS</span>,
+  logo: <span><img src="/Logo_transparent.png" width="150px" /></span>,
   project: {
     link: 'https://github.com/ppmpreetham',
   },
