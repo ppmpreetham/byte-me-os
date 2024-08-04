@@ -1,0 +1,59 @@
+---
+title: Introduction to OS
+description: Get to know basics before building an OS
+pubDate: '2024-3-25'
+
+---
+
+What happens when you turn the computer ON?
+1.  Executes the firmware code that is on the ROM
+2.  ROM performs POST (Power-On Self-Test) which detects RAM
+3.  After that, ROM initializes CPU and hardware
+4.  Looks for a bootable disk, boots OS Kernel
+
+## There are 2 firmware standards in Computers:
+-  BIOS ( Basic Input Output System )
+-  UEFI ( Unified Extensible Firmware Interface )
+
+BIOS is simple, supported from the pcs from 1980s. 
+UEFI is modern, complex to set-up. It emulates BIOS in the backend.
+
+That is sad, because all the computers boots up in 16-bit #real_mode because 1980 bootloaders would still work.
+
+When you turn on a computer, it loads the BIOS from some special flash memory located on the motherboard.
+
+The BIOS runs self-test and initialization routines of the hardware, then it looks for bootable disks.
+
+If it finds one, control is transferred to its _bootloader_, which is a 512-byte portion of executable code stored at the disk’s beginning.
+
+Most bootloaders are larger than 512 bytes, so bootloaders are commonly split into a small first stage, which fits into 512 bytes, and a second stage, which is subsequently loaded by the first stage.
+
+The bootloader has to determine the location of the kernel image on the disk and load it into memory
+
+It also needs to switch the CPU from the 16-bit [real mode](https://en.wikipedia.org/wiki/Real_mode) first to the 32-bit [protected mode](https://en.wikipedia.org/wiki/Protected_mode), and then to the 64-bit [long mode](https://en.wikipedia.org/wiki/Long_mode), where 64-bit registers and the complete main memory are available
+
+Its third job is to query certain information (such as a memory map) from the BIOS and pass it to the OS kernel.
+
+### Multi-Boot?
+To avoid that every operating system implements its own bootloader, which is only compatible with a single OS, the [Free Software Foundation](https://en.wikipedia.org/wiki/Free_Software_Foundation) created an open bootloader standard called [Multiboot](https://wiki.osdev.org/Multiboot) in 1995
+
+Interface between the bootloader and the operating system. GNU GRUB is used in many linux systems
+
+To make a kernel Multiboot compliant, one just needs to insert a so-called [Multiboot header](https://www.gnu.org/software/grub/manual/multiboot/multiboot.html#OS-image-format) at the beginning of the kernel file.
+
+
+
+```json
+"features": "-mmx,-sse,+soft-float",
+```
+- '-' means disable here
+- '+' means enable here
+
+#MMX :  (MultiMedia eXtension) Set of instructions in computer processors primarily designed to enhance multimedia performance.
+#SSE: (Streaming SIMD Extensions) Another set of instructions in processors aimed at improving multimedia and gaming performance by processing multiple data elements simultaneously.
+
+#MMX and #SSE are features which support [Single Instruction Multiple Data (SIMD)](https://en.wikipedia.org/wiki/SIMD) instructions. That means they do a single operation to multiple datas faster. But they end up taking a lot of time, hence not giving time for the other processes to run. So, we disable it, especially in OS development.
+
+When the kernel pauses the program, it needs to remember exactly what the program was doing so that it can resume from that point once the interruption is dealt with. To do this, it saves the current state of the program, including all the data stored in the processor's registers. However, when the MMX and SSE features are used in the program, these registers contain a lot of data related to those features. So, before the kernel can save the state of the interrupted program, it needs to make sure it saves all the data related to MMX and SSE, which can be a lot of information.
+
+Enabling #soft-float, which means that floating-point arithmetic operations will be handled by software routines instead of relying on dedicated hardware support.
