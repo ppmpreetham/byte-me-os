@@ -23,7 +23,12 @@ const config: DocsThemeConfig = {
   footer: {
     text: 'MIT 2024 © Preetham Pemmasani',
   },
-  head: <meta name="description" content={"Beginner OS Tutorial"} />,
+  head: 
+  <>
+  <meta name="description" content={"Beginner OS Tutorial"} />
+  <link rel="shortcut icon" href="Logo_transparent.png" type="image/x-icon" />k
+  </>
+  ,
 }
 
 
