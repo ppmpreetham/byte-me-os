@@ -8,7 +8,6 @@ Inspired by Philipp Oppermann's [[blog](https://os.phil-opp.com/)], this tutoria
 
 ## Why an Operating System?
 
-
 Gain deeper understanding of how computers work at a low level. 
 
 By creating an OS, you'll learn about memory management, process scheduling, device drivers, and etc.
