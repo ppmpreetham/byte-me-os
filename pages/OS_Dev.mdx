@@ -1,18 +1,20 @@
 ## What happens when you turn the computer ON?
-1.  The computer executes the firmware code that is on the ROM
-2.  ROM performs POST (Power-On Self-Test) which detects RAM
-3.  After that, oROM initializes CPU and hardware
-4.  Looks for a bootable disk, boots OS Kernel
+- Computer loads the BIOS from some special flash memory located on motherboard
+- BIOS runs self-test and looks for bootable disks
+- The computer executes the firmware code that is on the ROM
+- ROM performs POST (Power-On Self-Test) which detects RAM
+- After that, oROM initializes CPU and hardware
+- Looks for a bootable disk, boots OS Kernel
 
 ## There are 2 firmware standards in Computers:
--  BIOS ( Basic Input Output System )
--  UEFI ( Unified Extensible Firmware Interface )
+-  `BIOS` ( Basic Input Output System )
+-  `UEFI` ( Unified Extensible Firmware Interface )
 
-BIOS is simple, supported from the pcs from 1980s. 
+BIOS is simple, supported from the pcs from `1980s`. 
 
 UEFI is modern, complex to set-up. It emulates BIOS in the backend.
 
-That is sad, because all the computers boots up in 16-bit [real mode](https://en.wikipedia.org/wiki/Real_mode) because 1980 bootloaders would still work.
+That is sad, because all the computers boots up in 16-bit [real mode](https://en.wikipedia.org/wiki/Real_mode) to make the 1980 bootloaders still work.
 
 When you turn on a computer, it loads the BIOS from some special flash memory located on the motherboard.
 
